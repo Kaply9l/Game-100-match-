@@ -1,14 +1,8 @@
-#include "comp_choise.h"
-#include "people_choise.h"
-#include <ctime>
-#include <iostream>
-
-using namespace std;
-const int MaxMatches = 100;
-int Player, Matches, Move;
-bool Correct;
+#include "head.h"
 
 int main() {
+ const int MaxMatches = 100;
+ int Player, Matches, Move;
   srand(time(0));
   Matches = MaxMatches;
   setlocale(LC_ALL, "Russian");
@@ -16,17 +10,17 @@ int main() {
   do //Тело функции, которая отвечает за ход
   {
     if (Player == 1) {
-      people_choise();
+      Move = people_choise(Matches, Move);
       cout << " \n";
       Player = 2;
-    } else {
-      comp_choise();
+    }else {
+      Move = comp_choise(Move, Matches);
       cout << " \n";
       Player = 1;
     }
     Matches -= Move;
 
-  } while (Matches != 0);
+  }while (Matches != 0);
   if (Player == 2) //Алгоритм, определяющий кто победил
   {
     cout << "Поздравляю, вы победили!\n";
