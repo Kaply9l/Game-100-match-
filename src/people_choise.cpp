@@ -1,4 +1,5 @@
 #include "head.h"
+
 int people_choise(int Matches, int Move) //Ход игрока
 {
   bool Correct;
@@ -13,9 +14,9 @@ int people_choise(int Matches, int Move) //Ход игрока
       return Move;
     }else
 	{
-      		cout << "Неверно, вы можете взять от одной до десяти спичек и не больше "
+      	cout << "Неверно, вы можете взять от одной до десяти спичек и не больше "
               "чем осталось на столе. Повторите ввод. \n";
-      		Correct = false;
+      	Correct = false;
     	}
   } while (!Correct);
 }

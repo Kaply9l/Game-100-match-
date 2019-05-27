@@ -1,5 +1,5 @@
 CFLAGS = -Wall -Werror
-COMPILER = g++ -std=c++11
+COMPILER = g++-4.8 -std=c++11
 OBJ = $(COMPILER) $(CFLAGS) -c $< -o $@
 
 all: target1 target2 target3 bin/100.exe
@@ -17,10 +17,10 @@ bin/100.exe: build/src/main.o build/src/people_choise.o build/src/comp_choise.o
 build/src/main.o: src/main.cpp src/head.h
 	$(OBJ)
 
-build/src/people.o: src/people_choise.cpp src/head.h
+build/src/people_choise.o: src/people_choise.cpp src/head.h
 	$(OBJ)
 
-build/src/comp.o: src/comp_choise.cpp src/head.h
+build/src/comp_choise.o: src/comp_choise.cpp src/head.h
 	$(OBJ)
 
 clean:
