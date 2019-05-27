@@ -11,16 +11,16 @@ target2:
 target3:
 	mkdir -p build/src
 
-bin/100.exe: build/src/main.o build/src/people.o build/src/comp.o
+bin/100.exe: build/src/main.o build/src/people_choise.o build/src/comp_choise.o
 	$(COMPILER) $(CFLAGS) $^ -o $@
 
 build/src/main.o: src/main.cpp src/head.h
 	$(OBJ)
 
-build/src/people.o: src/people.cpp src/head.h
+build/src/people.o: src/people_choise.cpp src/head.h
 	$(OBJ)
 
-build/src/comp.o: src/comp.cpp src/head.h
+build/src/comp.o: src/comp_choise.cpp src/head.h
 	$(OBJ)
 
 clean:
