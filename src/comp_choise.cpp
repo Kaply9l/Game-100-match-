@@ -4,14 +4,16 @@
 
 using namespace std;
 const int MaxMatches = 100;
-extern int Player, Matches, Move;
+extern int Player, Move, Matches;
 extern bool Correct;
 
-void comp_choise() //Ход ИИ
+int comp_choise() //Ход ИИ
 {
+    Move = Matches;
+    
 	if (Matches <= 10)
 	{
-		Move = Matches;
+		return Move;
 	}
 	else
 	{
