@@ -1,14 +1,11 @@
-#include "comp_choise.h"
-#include "people_choise.h"
-#include <ctime>
-#include <iostream>
-
-using namespace std;
-const int MaxMatches = 100;
-int Player, Matches, Move;
-bool Correct;
+#include "head.h"
 
 int main() {
+
+  const int MaxMatches = 100;
+  int Player, Matches, Move;
+  bool Correct;
+
   srand(time(0));
   Matches = MaxMatches;
   setlocale(LC_ALL, "Russian");
