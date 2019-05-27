@@ -1,13 +1,6 @@
-#include "people_choise.h"
-#include <ctime>
-#include <iostream>
+#include "head.h"
 
-using namespace std;
-const int MaxMatches = 100;
-extern int Player, Matches, Move;
-extern bool Correct;
-
-int people_choise() //Ход игрока
+int people_choise(int Matches, int move, bool Correct) //Ход игрока
 {
   do {
     cout << "Ваш ход на столе " << Matches << " спичек. \n";
@@ -15,15 +8,14 @@ int people_choise() //Ход игрока
     cin >> Move;
     Correct = true;
 
-    if (Move >= 1 && Move <= 10 &&
-        Move <= Matches) //Проверка правильности введенного числа
+    if (Move >= 1 && Move <= 10 && Move <= Matches) //Проверка правильности введенного числа
     {
-      return Correct;
-    } else {
-      cout << "Неверно, вы можете взять от одной до десяти спичек и не больше "
+      return move;
+    }else 
+	{
+      		cout << "Неверно, вы можете взять от одной до десяти спичек и не больше "
               "чем осталось на столе. Повторите ввод. \n";
-
-      Correct = false;
-    }
+      		Correct = false;
+    	}
   } while (!Correct);
 }
