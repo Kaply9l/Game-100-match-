@@ -1,5 +1,5 @@
 CFLAGS = -Wall -Werror
-COMPILER = g++-4.8 -std=c++11
+COMPILER = g++ -std=c++11
 OBJ = $(COMPILER) $(CFLAGS) -c $< -o $@
 
 all: target1 target2 target3 bin/100.exe
