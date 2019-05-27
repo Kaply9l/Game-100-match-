@@ -1,6 +1,6 @@
 #ifndef PEOPLE_CHOISE_H
 #define PEOPLE_CHOISE_H
 
-void people_choise();
+int people_choise();
 
 #endif
