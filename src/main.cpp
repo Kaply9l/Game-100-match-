@@ -3,8 +3,6 @@
 int main() {
  const int MaxMatches = 100;
  int Player, Matches, Move;
- bool Correct;
-
   srand(time(0));
   Matches = MaxMatches;
   setlocale(LC_ALL, "Russian");
@@ -12,7 +10,7 @@ int main() {
   do //Тело функции, которая отвечает за ход
   {
     if (Player == 1) {
-      move = people_choise(Matches, Move, Correct);
+      Move = people_choise(Matches, Move);
       cout << " \n";
       Player = 2;
     }else {
