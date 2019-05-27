@@ -25,7 +25,7 @@ int comp_choise(int Move, int Matches) //Ход ИИ
 		{
 			cout << " спички.\n";
 		}
-		if (Move >= 5 && <= 10)
+		if (Move >= 5 && Move <= 10)
 		{
 			cout << " спичек.\n";
 		}
