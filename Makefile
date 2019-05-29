@@ -15,16 +15,16 @@ target4:
 	mkdir -p build/test
 
 
-bin/100.exe: build/src/main.o build/src/people.o build/src/comp.o
+bin/100.exe: build/src/main.o build/src/people_choise.o build/src/comp_choise.o
 	$(compilator) $(CFLAGS) $^ -o $@
 
 build/src/main.o: src/main.cpp src/head.h
 	$(srcOB)
 
-build/src/people.o: src/people.cpp src/head.h
+build/src/people.o: src/people_choise.cpp src/head.h
 	$(srcOB)
 
-build/src/comp.o: src/comp.cpp src/head.h
+build/src/comp.o: src/comp_choise.cpp src/head.h
 	$(srcOB)
 
 bin/test100: build/test/test.o build/test/comp-test.o build/test/people-test.o
