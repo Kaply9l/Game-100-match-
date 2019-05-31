@@ -2,15 +2,14 @@
 
 int people_choise(int Move) //Ход игрока
 {
-      while(1)
-      {
-        if (Move >= 1 && Move <= 10)
-          break;
-        return 0;
-      }
+  while (1) {
+    if (Move >= 1 && Move <= 10)
+      break;
+    return 0;
+  }
   return Move;
 }
-TEST_CASE("people-choise-test", "[TEST]"){
+TEST_CASE("people-choise-test", "[TEST]") {
   REQUIRE(people_choise(1) == 1);
   REQUIRE(people_choise(2) == 2);
   REQUIRE(people_choise(3) == 3);

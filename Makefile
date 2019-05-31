@@ -1,9 +1,9 @@
 CFLAGS = -Wall -Werror
 compilator = g++ -std=c++11
 srcOB = $(compilator) $(CFLAGS) -c $< -o $@
-testOB = $(compilator) $(CFLAGS) -I testing/catch2 -c $< -o $@ 
+testOB = $(compilator) $(CFLAGS) -I testing/catch2 -c $< -o $@
 
-all: target1 target2 target3 target4 bin/100.exe
+all: target1 target2 target3 target4 bin/100.exe bin/test100
 
 target1:
 	mkdir -p bin

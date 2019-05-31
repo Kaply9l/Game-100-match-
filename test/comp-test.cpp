@@ -1,23 +1,20 @@
 #include "head-test.h"
+
 int comp_choise(int Move, int Matches) //Ход ИИ
 {
-	if (Matches <= 10)
-	{
-		Move = Matches;
-	}else
-	    {
-		      //Move = rand() % 10 + 1;
-          if (Move > Matches)
-		       {
-			          Move = Matches;
-			          return Move;
-	 	       }
-	    }
-	return Move;
+  if (Matches <= 10) {
+    Move = Matches;
+  } else {
+    // Move = rand() % 10 + 1;
+    if (Move > Matches) {
+      Move = Matches;
+      return Move;
+    }
+  }
+  return Move;
 }
 
-TEST_CASE("comp-chise", "[TESTING]")
-{
+TEST_CASE("comp-chise", "[TESTING]") {
   int Move = 0;
   int Matches = 1;
   REQUIRE(comp_choise(Move, Matches) == 1);
